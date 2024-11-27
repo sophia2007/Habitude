@@ -3,6 +3,7 @@ ISC4U Summative - Human Habits and Productivity Simulator
 
 **Concept:**
 A simulation that models the impact of daily habits on a person's long-term productivity and well-being. Users input a schedule or set of routines (e.g., sleep, work, exercise, relaxation), and the simulation shows how those routines affect outcomes like efficiency, happiness, and health over time.
+
 **Objective:**
 To maintain the physic and mental health bars while lowering the work bar. The work bar increase weekly and decrease every work period by an amount dependent on productivity. 
 - Win: If the war bar is worked down to 0 at the end of 3 consecutive weeks.
