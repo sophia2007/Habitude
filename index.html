@@ -3,15 +3,63 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="/src/js/main.js"></script>
+
 </head>
 <body>
-    <!-- Iframes are used to display a web page within a web page-->
-    <iframe src="/src/html/3D.html" height="200" width="300" title="viewport"></iframe>
 
-    <!-- Progress Bars -->
-    <label for="file">Downloading progress:</label>
-    <progress id="file" value="32" max="100"> 32% </progress>
+    <div id="main">
+        <div id="topComponent">
+            <!-- Progress Bars -->
+            <div class="column1">
+                <div class="progressbar" id="workload">Workload</div>
+                <div class="progressbar" id="productivity">Productivity</div>
+            </div>
 
+            <div class="column1">
+                <div class="progressbar" id="physHealth">Physical Health</div>
+                <div class="progressbar" id="mentHealth">Mental Health</div>
+            </div>
+        </div>
 
+        <div id="bottomComponent">
+            <!-- Iframes (Used to display a web page within a web page) -->
+            <iframe src="/src/html/3D.html" id="threeDviewport"></iframe>
+
+            <div class="sideComponent">
+                <!-- Schedule Blocks -->
+                <div id="blocksComponent">
+                    <div class="column2">
+                        <div class="scheduleBlocks" id="work">Work</div>
+                        <div class="scheduleBlocks" id="exercise">Exercise</div>
+                    </div>
+
+                    <div class="column2">
+                        <div class="scheduleBlocks" id="sleep">Sleep</div>
+                        <div class="scheduleBlocks" id="leisure">Leisure</div>
+                    </div>
+
+                    <div class="column2">
+                        <div class="scheduleBlocks" id="cooking">Cooking</div>
+                        <div class="scheduleBlocks" id="eating">Eating</div>
+                    </div>
+                </div>
+
+                <!-- Schedule-->
+                <ul id="schedule">
+                    <li class="ui-state-default">Existing Item</li>
+                    <li class="ui-state-default">Existing Item</li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+    
 </body>
 </html>

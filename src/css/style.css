@@ -1,0 +1,76 @@
+#main {
+    padding: 10px 5px 10px 5px;
+}
+
+.column1 {
+    display: inline-table;
+    width: 49.5%;
+    margin-left: 3px;
+}
+
+.progressbar {
+    border-radius: 15px;
+    list-style-type: none;
+    height: 30px;
+    width: 100%;
+}
+
+    .progressbar .progressbar-value {
+        margin: -1px;
+        height: 100%;
+    }
+
+    .progressbar .progressbar-overlay {
+        height: 100%;
+        opacity: 0.25;
+    }
+
+#bottomComponent {
+    width: 100%;
+    display: inline-flex;
+}
+
+#threeDviewport {
+    height: 600px;
+    width: 70%;
+}
+
+.sideComponent {
+    width: 29.5%;
+    margin-left: 5px;
+}
+
+#blocksComponent {
+    width: 100%;
+}
+
+.column2 {
+    display: inline-table;
+    width: 30.5%;
+    margin-left: 3px;
+}
+
+#scheduleBlocks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#schedule {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+    #schedule li {
+        border-radius: 15px;
+        margin: 0 3px 3px 3px;
+        padding: 0.4em;
+        padding-left: 1.5em;
+        font-size: 1.4em;
+        height: 18px;
+    }
+
+
+
