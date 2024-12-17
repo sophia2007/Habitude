@@ -1,29 +1,46 @@
-#main {
-    padding: 10px 5px 10px 5px;
+/***   BASICS   ***/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
-.column1 {
+li {
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+}
+
+/***   REPEATING COMPONENTS   ***/
+
+#main {
+    padding: 10px 5px 10px 5px;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.column {
     display: inline-table;
-    width: 49.5%;
+    width: 49%;
     margin-left: 3px;
 }
 
+/***   TOP COMPONENTS   ***/
+
 .progressbar {
-    border-radius: 15px;
     list-style-type: none;
     height: 30px;
     width: 100%;
+    position: relative;
 }
 
-    .progressbar .progressbar-value {
-        margin: -1px;
-        height: 100%;
+    .progressbar label {
+        position: absolute;
     }
 
-    .progressbar .progressbar-overlay {
-        height: 100%;
-        opacity: 0.25;
-    }
+/***   LOWER COMPONENTS   ***/
 
 #bottomComponent {
     width: 100%;
@@ -35,6 +52,8 @@
     width: 70%;
 }
 
+/***   SIDE COMPONENTS   ***/
+
 .sideComponent {
     width: 29.5%;
     margin-left: 5px;
@@ -44,33 +63,67 @@
     width: 100%;
 }
 
-.column2 {
-    display: inline-table;
-    width: 30.5%;
-    margin-left: 3px;
-}
-
 #scheduleBlocks {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+#calendar {
+    overflow-y: scroll; /* Show vertical scrollbar */
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    display: flex;
+}
+
+#times {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.timeslots {
+    height: 25px;
+    padding: 0.4em;
+    text-align: center;
+}
+
 #schedule {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    height: 100%;
+    flex-grow: 3;
 }
 
     #schedule li {
-        border-radius: 15px;
         margin: 0 3px 3px 3px;
         padding: 0.4em;
         padding-left: 1.5em;
         font-size: 1.4em;
         height: 18px;
     }
+
+.scheduleslots {
+    border-color: pink;
+    height: 25px;
+    padding: 0.4em;
+    text-align: center;
+}
+
+.portlet {
+    height: 25px;
+    padding: 0.3em;
+}
+
+.portlet-header {
+    margin-bottom: 0.1em;
+    position: relative;
+    height: inherit;
+}
+
+.portlet-placeholder {
+    border: 1px dotted black;
+    height: 50px;
+    list-style-type: none;
+}
 
 
 

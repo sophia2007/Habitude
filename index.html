@@ -4,6 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/src/css/jquery-ui.structure.css">
     <link rel="stylesheet" href="/src/css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -16,14 +17,14 @@
     <div id="main">
         <div id="topComponent">
             <!-- Progress Bars -->
-            <div class="column1">
-                <div class="progressbar" id="workload">Workload</div>
-                <div class="progressbar" id="productivity">Productivity</div>
+            <div class="column">
+                <div class="progressbar" id="workload"></div>
+                <div class="progressbar" id="productivity"></div>
             </div>
 
-            <div class="column1">
-                <div class="progressbar" id="physHealth">Physical Health</div>
-                <div class="progressbar" id="mentHealth">Mental Health</div>
+            <div class="column">
+                <div class="progressbar" id="physHealth"></div>
+                <div class="progressbar" id="mentHealth"></div>
             </div>
         </div>
 
@@ -31,30 +32,68 @@
             <!-- Iframes (Used to display a web page within a web page) -->
             <iframe src="/src/html/3D.html" id="threeDviewport"></iframe>
 
-            <div class="sideComponent">
-                <!-- Schedule Blocks -->
-                <div id="blocksComponent">
-                    <div class="column2">
-                        <div class="scheduleBlocks" id="work">Work</div>
-                        <div class="scheduleBlocks" id="exercise">Exercise</div>
-                    </div>
-
-                    <div class="column2">
-                        <div class="scheduleBlocks" id="sleep">Sleep</div>
-                        <div class="scheduleBlocks" id="leisure">Leisure</div>
-                    </div>
-
-                    <div class="column2">
-                        <div class="scheduleBlocks" id="cooking">Cooking</div>
-                        <div class="scheduleBlocks" id="eating">Eating</div>
-                    </div>
-                </div>
-
-                <!-- Schedule-->
-                <ul id="schedule">
-                    <li class="ui-state-default">Existing Item</li>
-                    <li class="ui-state-default">Existing Item</li>
+            <div class="sideComponent ui-widget-content ui-state-default">
+                <h4 class="ui-widget-header"><span class="ui-icon ui-icon-calendar"></span>Daily Schedule</h4>
+                
+                <ul id="menu">
+                    <li id="blocksComponent">
+                        <div>Create</div>
+                        <ul>
+                            <li>
+                                <div class="scheduleBlocks" id="work"><span class="ui-icon ui-icon-seek-start"></span>Work</div>
+                            </li>
+                            <li>
+                                <div class="scheduleBlocks" id="exercise"><span class="ui-icon ui-icon-stop"></span>Exercise</div>
+                            </li>
+                            <li>
+                                <div class="scheduleBlocks" id="sleep"><span class="ui-icon ui-icon-play"></span>Sleep</div>
+                            </li>
+                            <li>
+                                <div class="scheduleBlocks" id="leisure"><span class="ui-icon ui-icon-seek-end"></span>Leisure</div>
+                            </li>
+                            <li>
+                                <div class="scheduleBlocks" id="cooking"><span class="ui-icon ui-icon-seek-end"></span>Cooking</div>
+                            </li>
+                            <li>
+                                <div class="scheduleBlocks" id="eating"><span class="ui-icon ui-icon-seek-end"></span>Eating</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Delete</div>
+                    </li>
                 </ul>
+
+                
+                <div id="calendar">
+                    <div id="times">
+                        <div class="timeslots">12am</div>
+                        <div class="timeslots">1am</div>
+                        <div class="timeslots">2am</div>
+                        <div class="timeslots">3am</div>
+                        <div class="timeslots">4am</div>
+                        <div class="timeslots">5am</div>
+                        <div class="timeslots">6am</div>
+                        <div class="timeslots">7am</div>
+                    </div>
+
+                    <ul id="schedule">
+                        <li class=scheduleslots> spot</li>
+                        <li class=scheduleslots> spot</li>
+                        <li class=scheduleslots> spot</li>
+                        <li class="portlet">
+                            <div class="portlet-header">Feeds</div>
+                        </li>
+                        <li class="portlet">
+                            <div class="portlet-header">News</div>
+                        </li>
+                        <li class="portlet">
+                            <div class="portlet-header">Shopping</div>
+                        </li>
+                    </ul>
+
+                </div>
+                
             </div>
         </div>
 

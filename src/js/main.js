@@ -6,8 +6,21 @@ let mentHealthVal = 20;
 $(document).ready(function () {
     // jQuery methods go here...
     $(function () {
-        $("#schedule").sortable();
+        $("#schedule").sortable({
+            connectWith: "#content",
+            cursor: "move",
+            handle: ".portlet-header",
+            placeholder: "portlet-placeholder ui-corner-all",
+        });
     });
+
+    $(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all").find(".portlet-header").addClass("ui-widget-header ui-corner-all");
+
+    $(".portlet").resizable({
+        grid: 40,
+        containment: "#schedule"
+    }
+    );
 
     $(".scheduleBlocks").each(function () {
         $(this).draggable({
@@ -15,6 +28,10 @@ $(document).ready(function () {
             helper: "clone",
             revert: "invalid"
         });
+    });
+
+    $(function () {
+        $("#menu").menu();
     });
 
     $(function () {
